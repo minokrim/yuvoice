@@ -1,0 +1,28 @@
+.tw-body{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    text-align: left;
+}
+.tw-heading{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.tw-vr{
+    height: 0.5;
+    width: 50%;
+    border: 1px solid black;
+    background-color: black;
+}
+.tw-content-holder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+.tw-content{
+    width: max-content;
+}
