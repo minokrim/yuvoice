@@ -1,0 +1,119 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(102, 45, 145,0.3);
+    width: 100%;
+    height: max-content;
+    margin-top: 100px;
+}
+.footer-body{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.footer-sec1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.footer-sec1>img{
+    width: auto;
+    height: 5rem;
+}
+.footer-sec1>p{
+    margin-top: 0px;
+    padding-top: 0px;
+    font-family: lato;
+}
+.social-images{
+    display: flex;
+    gap: 20px;
+}
+.social-images>P{
+    font-family: urbanist;
+}
+.social-images>img{
+    width: auto;
+    height: 1.5rem;
+}
+
+.footer-sec2{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: left;
+}
+.footer-sec2>p{
+    font-family: urbanist;
+    font-weight: 500;
+    font-size: 18px;
+}
+.ql-options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.ql-options h3{
+    background-color: rgb(102, 45, 145,0.2);
+    width: max-content;
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0px;
+    color: #662d91;
+    font-size: 18px;
+    font-weight: 500;
+}
+.ql-option1{
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    gap: 10px;
+}
+.ql-option2{
+    display: flex;
+    margin-top: 0px;
+    padding-top: 0px;
+    gap: 10px;
+    padding-left: 15px;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.footer-sec3{
+    display: flex;
+    flex-direction: column;
+}
+.footer-sec3>h2{
+    font-size: 18px;
+    font-family: urbanist;
+    font-weight: 500;
+}
+.footer-sec3>p{
+    font-size: 14px;
+    font-family: urbanist;
+    line-height: 22px;
+    text-align: right;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.footer-sec4{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.footer-sec4>h4{
+    font-family: urbanist;
+    font-size: 16px;
+    font-weight: 500;
+}

@@ -2,7 +2,15 @@
     display: flex;
     flex-direction: column;
     background: linear-gradient(to bottom, rgb(102, 45, 145,0.2), #ffffff);
-    height: 100%;
+    height: max-content;
     width: 100%;
     align-items: center;
+}
+.sec-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    height: 1000px;
+    gap: 30px;
 }

@@ -1,0 +1,36 @@
+.storyNav-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.storyNav-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.hr{
+    width: 97%;
+    border: 0.1px solid grey;
+}
+
+.storyNav-container .cat{
+    width: max-content;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: #7a848c;
+    font-size: 18px;
+    font-weight: bold;
+    transition: ease-in-out 0.3s;
+}
+.storyNav-container .cat:hover {
+    transform: scale(1.2); 
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+}
+.storyNav-render:active {
+    cursor: pointer; 
+    transform: scale(1.05); 
+}
