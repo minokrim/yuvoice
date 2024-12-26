@@ -1,8 +1,16 @@
 .header-body{
     background-color: white;
+<<<<<<< HEAD
     width: 80%;
     border-radius: 20px;
     padding-left: 20px;
+=======
+    width: 90%;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    box-shadow: 0px 0px 10px 0px black;
+>>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
 }
 .main-edit-title{
     display: flex;

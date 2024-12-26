@@ -5,6 +5,10 @@
 .card-img-sec{
     display: flex;
     align-items: center;
+<<<<<<< HEAD
+=======
+    width: 100%;
+>>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
 }
 .card-img-sec>p{
     position: relative;
@@ -15,15 +19,28 @@
     height: 23px;
     width: 80px;
     border-radius: 5px;
+<<<<<<< HEAD
     font-size: 20px;
     margin-left: -99.5px;
     margin-top: -187px;
     text-align: center;
+=======
+    font-size: 14px;
+    margin-left: -99.5px;
+    margin-top: -193.5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+>>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
 }
 .card-img-sec>img{
     position: relative;
     z-index: 0;
+<<<<<<< HEAD
     width: 360px;
+=======
+    width: 100%;
+>>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
     height: 250px;
     border-radius: 5px 5px 0px 0px;
     object-fit: cover;
