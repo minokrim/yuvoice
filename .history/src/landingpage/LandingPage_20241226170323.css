@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.landing-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+
+.header-carousel img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.header-content {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  color: black;
+  z-index: 2;
+  font-size: 25px;
+}
+
+.header-content h2 {
+  font-size: 3rem;
+  color: blue;
+}
+
+.about-us-btn {
+  background-color: #6c63ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.learn-more-btn {
+  background-color: #6c63ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.fiction-btn {
+  background-color: lightgreen;
+}
+
+/* Platform Section */
+.platform {
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #f8f9fa, #f1e3f8);
+}
+
+.platform h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.platform p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.platform .highlight {
+  color: #ff5e57;
+  font-weight: bold;
+}
+
+.platform-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.platform-box {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.platform-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.platform-box .highlight-social {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.platform-box .highlight-media {
+  color: #4d79ff;
+  font-weight: bold;
+}
+
+.platform-box ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.platform-box img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.media-images {
+  display: flex;
+  gap: 10px;
+}
+
+.media-images img {
+  width: 30%;
+  border-radius: 8px;
+}
+
+/* Subscribe Section */
+.subscribe {
+  background-color: #6c63ff;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.subscribe form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subscribe input[type="email"] {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.subscribe button {
+  background-color: #5348d7;
+  color: white;
+  border-radius: 5px;
+}
