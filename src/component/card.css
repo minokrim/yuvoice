@@ -1,47 +1,36 @@
 .card-body{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 .card-img-sec{
     display: flex;
     align-items: center;
-<<<<<<< HEAD
-=======
+    position: relative;
     width: 100%;
->>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
 }
 .card-img-sec>p{
-    position: relative;
+    position: absolute;
     z-index: 1;
     background-color: #9de828;
     color: black;
     padding: 10px;
     height: 23px;
-    width: 80px;
+    width: 5.7em;
     border-radius: 5px;
-<<<<<<< HEAD
-    font-size: 20px;
-    margin-left: -99.5px;
-    margin-top: -187px;
-    text-align: center;
-=======
     font-size: 14px;
-    margin-left: -99.5px;
-    margin-top: -193.5px;
     text-align: center;
     display: flex;
     align-items: center;
->>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
+    top: -14px;
+    right: 0px;
 }
 .card-img-sec>img{
     position: relative;
     z-index: 0;
-<<<<<<< HEAD
-    width: 360px;
-=======
     width: 100%;
->>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
-    height: 250px;
+    height: 15.7em;
     border-radius: 5px 5px 0px 0px;
     object-fit: cover;
 }
@@ -51,18 +40,23 @@
     text-align: left;
     background-color: white;
     max-width: 360px;
+    height: 50%;
 }
 .card-detai-sec>h3{
     font-weight: bold;
     padding-left: 10px;
-
+    font-size: 1.2em;
+    height: 3em;
 }
 .card-detai-sec>p{
+    margin-top: 0px;
+    padding-top: 0px;
     font-weight: lighter;
     width: 90%;
-    height: 60px;
+    height: 4em;
     overflow: hidden;
     padding-left: 10px;
+    font-size: 1em;
 
  }
 .card-footer{
@@ -86,11 +80,40 @@
 .read-more{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1em;
     color: #3863ff;
     margin-right: 10px;
+    font-size: 1em;
+}
+.read-more>p{
+    width: 100%;
 }
 .read-more img{
     max-width: 100%;
-    height: 20px;
+    height: 1em;
+}
+
+@media screen and (max-width: 1040px) {
+    .card-img-sec>img{
+        height: 11em;
+    }
+    .read-more img{
+        height: 0.5em;
+    }
+    .card-footer-writer{
+        font-size: 0.8em;
+    }
+    .card-detai-sec>h3{
+        font-size: 0.8em;
+    }
+    .card-detai-sec>p{
+        font-weight: lighter;
+        width: 90%;
+        overflow: hidden;
+        font-size: 0.6em;
+     }
+    .read-more{
+        font-size: 0.5em;
+    }
+
 }

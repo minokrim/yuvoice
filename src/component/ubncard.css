@@ -1,18 +1,18 @@
 .ubnCard-body{
     display: flex;
-    width: 340px;
-    align-items: center;
     width: 100%;
+    align-items: center;
 }
 .ubnCard-holder{
     display: flex;
     align-items: center;
+    width: 100%;
 }
 .ubnCard-holder>img{
-    height: 170px;
-    width: 180px;
+    height: 10em;
     border-radius: 10px;
     object-fit: cover;
+    width: 50%;
 }
 .ubnCard-detail{
     display: flex;
@@ -22,7 +22,7 @@
     width: 50%;
 }
 .ubnCard-detail h3{
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 630;
 }
 .ubnCard-detail>p{
@@ -45,5 +45,27 @@
     height: 1em;
 }
 .ubnCard-writer>p{
-    font-size: 12px;
+    font-size: 0.9em;
+}
+
+
+@media screen and (max-width: 1040px) {
+    .ubnCard-holder>img{
+        height: 7em;
+        width: 50%;
+    }
+    .ubnCard-detail h3{
+        font-size: 0.5em;
+    }
+    .ubnCard-detail>p{
+        font-size: 0.5em;
+        overflow: hidden;
+        height: 41px;
+    }
+    .ubnCard-writer>img{
+        height: 0.5em;
+    }
+    .ubnCard-writer>p{
+        font-size: 0.5em;
+    }
 }
