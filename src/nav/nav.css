@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 .nav-left{
     display: flex;
@@ -22,7 +23,6 @@
     align-items: center;
     gap: 10%;
     padding-right: 8em;
-
 }
 .nav-option{
     display: flex;
@@ -34,4 +34,67 @@
 .nav-option img{
     max-width: 100%;
     height: 0.5em;
+}
+#hamburger{
+    display: none;
+}
+ 
+
+
+@media screen and (max-width: 1240px) {
+    .nav-Body{
+        justify-content:space-around
+    }
+    .nav-left{
+        padding-left:2em
+    }
+    .nav-right{
+        padding-right:2em
+    }
+
+}
+@media screen and (max-width: 660px) {
+    .nav-Body{
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .nav-left{
+        padding-left: 0px;
+        justify-content: space-around;
+        width: 100%;
+
+    }
+    .nav-right{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+        position: relative;
+        width: auto;
+        height: 25px;
+        z-index: 5;
+    }
+    .mobileNavOptions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin-top: -120px;
+        background: linear-gradient(to bottom, rgb(102, 45, 145,0.2), #ffffff);
+        color: black;
+        gap: 50px;
+        padding: 100px 0px 80px 0px;
+        text-align: center;
+        z-index: 2;
+        width: 100%;
+        height: 100vh;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .mobileNavOptions>P{
+        border: 1px solid black;
+        padding: 5px;
+        width: 70%;
+        border-radius: 20px;
+        font-weight: 600;
+    }
 }

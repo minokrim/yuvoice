@@ -26,5 +26,25 @@
     gap: 50px;
 }
 .tw-content{
-    width: 360px;
+    width: 22em;
+}
+
+@media screen and (max-width: 1040px) {
+    .tw-content-holder{
+        /* justify-content: flex-start; */
+        gap: 0px;
+    }
+    .tw-content{
+        width: 12em;
+        height: 25em;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .tw-body{
+        width: 100%;
+    }
+    .tw-content{
+        width: 19em;
+    }
 }

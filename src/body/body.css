@@ -5,12 +5,21 @@
     height: max-content;
     width: 100%;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 .sec-2{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    margin-top: 50px;
-    height: 1000px;
+    width: 100%;
+    padding-top: 50px;
+    /* margin-top: 50px; */
     gap: 30px;
+}
+
+@media screen and (max-width: 660px) {
+    .sec-2{
+        flex-direction: column;
+    }
 }

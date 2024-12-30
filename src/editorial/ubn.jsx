@@ -28,7 +28,7 @@ export default function Ubn(){
         </section>
         <section className="ubn-detail">
             {topArticles.map((article,index)=>(
-                <div key={article.id}>
+                <div key={article.id} className="ubn-card">
                     <UbnCard 
                     image={associatedMedia[index] && associatedMedia[index].source_url}
                     title={article.title.rendered}
