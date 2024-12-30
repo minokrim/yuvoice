@@ -7,13 +7,10 @@
 .card-img-sec{
     display: flex;
     align-items: center;
-<<<<<<< HEAD
-=======
-    width: 100%;
->>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
+    position: relative;
 }
 .card-img-sec>p{
-    position: relative;
+    position: absolute;
     z-index: 1;
     background-color: #9de828;
     color: black;
@@ -21,28 +18,17 @@
     height: 23px;
     width: 5.7em;
     border-radius: 5px;
-<<<<<<< HEAD
-    font-size: 20px;
-    margin-left: -99.5px;
-    margin-top: -187px;
-    text-align: center;
-=======
     font-size: 14px;
-    margin-left: -7.1em;
-    margin-top: -14em;
     text-align: center;
     display: flex;
     align-items: center;
->>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
+    top: -14px;
+    right: 0px;
 }
 .card-img-sec>img{
     position: relative;
     z-index: 0;
-<<<<<<< HEAD
-    width: 360px;
-=======
     width: 100%;
->>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
     height: 250px;
     border-radius: 5px 5px 0px 0px;
     object-fit: cover;
@@ -124,9 +110,6 @@
         width: 90%;
         overflow: hidden;
         font-size: 0.6em;
-     }
-     .card-img-sec>p{
-        margin-top: -8.5em;
      }
     .read-more{
         font-size: 0.5em;
