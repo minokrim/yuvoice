@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 100px;
+    width: 100%;
     height: max-content;
 }
 .stories_articles{
@@ -10,15 +11,14 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 50px;
-    row-gap: 300px;
+    gap: 5em;
+    row-gap: 10em;
     margin-top: 50px;
 }
 .stories_card{
     display: flex;
     width: 280px;
-    height: 320px;
-    gap: 20px;
+    height: max-content;
 }
 .search_container{
     display: flex;
@@ -53,7 +53,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 250px;
+    margin-top: 5em;
   }
   
   .pagination_controls button {
@@ -78,4 +78,12 @@
     width: auto;
     height: 1em;
     padding: 5px 1px;
+  }
+
+
+
+  @media screen and (max-width: 660px) {
+    .search_container>input{
+      width: 14em;
+    }
   }

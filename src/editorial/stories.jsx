@@ -12,26 +12,23 @@ export default function Stories(){
     const post=useContext(ResponseContext)
     const {media,loading}=useContext(MediaContext)
     const [currentPage, setCurrentPage] = useState(1);
+    const [selectedCategory, setSelectedCategory] = useState("");
     const articlesPerPage = 12
-        // const getTopArticlesWithMedia = (count) => {
-        //     const slicedArticles = Array.isArray(post) ? post.slice(0, count) : [];
-        //     const associatedMedia = slicedArticles.map((article) =>
-        //       media.find((mediaItem) => mediaItem.id === article.featured_media)
-        //     );
-        //     return { articles: slicedArticles, media: associatedMedia };
-        //   };
     
         if(loading){
             return (<img src={spinner} alt="" />)
         }
         
-        // const { articles: topArticles, media: associatedMedia } = getTopArticlesWithMedia();
+        const filteredArticles = selectedCategory
+        ? post.filter((article) => article.acf.category.includes(selectedCategory))
+        : post;
+        console.log(selectedCategory)
 
-        const totalPages = Math.ceil(post.length / articlesPerPage);
+        const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
         const startIndex = (currentPage - 1) * articlesPerPage;
         const endIndex = currentPage * articlesPerPage;
       
-        const currentArticles = post.slice(startIndex, endIndex);
+        const currentArticles = filteredArticles.slice(startIndex, endIndex);
         const currentMedia = currentArticles.map((article) =>
             media.find((mediaItem) => mediaItem.id === article.featured_media)
           );
@@ -50,11 +47,16 @@ export default function Stories(){
         const handlePageClick = (pageNumber) => {
             setCurrentPage(pageNumber);
           };
+
+        const handleCategorySelect = (category) => {
+            setSelectedCategory(category);
+            setCurrentPage(1);
+        };
     
     return <main className="stories_holder">
         
         <section>
-            <NavStories/>
+            <NavStories onCategorySelect={handleCategorySelect} />
         </section>
 
         <section className="search_container">

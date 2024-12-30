@@ -10,6 +10,7 @@
     width: 100%;
     justify-content: space-around;
 }
+
 .hr{
     width: 97%;
     border: 0.1px solid grey;
@@ -33,4 +34,12 @@
 .storyNav-render:active {
     cursor: pointer; 
     transform: scale(1.05); 
+}
+
+
+@media screen and (max-width: 1040px) {
+    .storyNav-container{
+        overflow-x: scroll;
+        gap: 5em
+    }
 }

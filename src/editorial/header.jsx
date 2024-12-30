@@ -35,10 +35,10 @@ export default function Header(){
 
 
     return <main className="header-body">
-        <section>
+        <section className="header-container">
             <div className="main-edit-title">
-            <h1>Brighter Tomorrow- <span>Highlighting exemplar stories from around the world</span></h1>
-            <p></p>
+            <h1>Brighter Tomorrow-</h1>
+            <span>Highlighting exemplar stories from around the world</span>
             </div>
             <div className="header-render-cont">
                 {loading ? (
