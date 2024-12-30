@@ -7,15 +7,9 @@
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
-    "react-responsive-carousel": "^3.2.23",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^4.2.4"
-=======
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.4",
     "proxy": "https://yuvoice.com"
->>>>>>> 57c2e2ea95cd2a50e42023fbbb93d43d8ba89c2a
   },
   "scripts": {
     "start": "react-scripts start",

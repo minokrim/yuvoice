@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+  }
+  
+  .landing-page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Header Section */
+  .header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    color: white;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/landingpage.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6); /* Darkens the image for contrast */
+    z-index: -1;
+  }
+  
+  .header-content {
+    max-width: 600px;
+    text-align: left;
+    z-index: 1; /* Ensures the text appears above the background image */
+  }
+  
+  .vision-title,
+  .belief-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #5348d7; /* Matches the theme's blue */
+  }
+  
+  .vision-text,
+  .belief-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  
+  .about-us-btn {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .about-us-btn:hover {
+    background-color: #5348d7;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      padding-left: 10%;
+    }
+  
+    .vision-title,
+    .belief-title {
+      font-size: 2rem;
+    }
+  
+    .vision-text,
+    .belief-text {
+      font-size: 1rem;
+    }
+  
+    .header-content {
+      max-width: 90%;
+    }
+  }
+  
