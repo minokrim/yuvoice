@@ -7,10 +7,11 @@
 .card-img-sec{
     display: flex;
     align-items: center;
+    position: relative;
     width: 100%;
 }
 .card-img-sec>p{
-    position: relative;
+    position: absolute;
     z-index: 1;
     background-color: #9de828;
     color: black;
@@ -19,11 +20,11 @@
     width: 5.7em;
     border-radius: 5px;
     font-size: 14px;
-    margin-left: -7.1em;
-    margin-top: -14em;
     text-align: center;
     display: flex;
     align-items: center;
+    top: -14px;
+    right: 0px;
 }
 .card-img-sec>img{
     position: relative;
@@ -110,9 +111,6 @@
         width: 90%;
         overflow: hidden;
         font-size: 0.6em;
-     }
-     .card-img-sec>p{
-        margin-top: -8.5em;
      }
     .read-more{
         font-size: 0.5em;
