@@ -8,21 +8,24 @@ import larrow from "../assets/left-arrow.png"
 import Card from "../component/card";
 import "./stories.css"
 import NavStories from "./storiesnav";
+
 export default function Stories(){
     const post=useContext(ResponseContext)
     const {media,loading}=useContext(MediaContext)
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedCategory, setSelectedCategory] = useState("");
     const articlesPerPage = 12
-    
-        if(loading){
-            return (<img src={spinner} alt="" />)
-        }
+    const [searchTerm, setSearchTerm] = useState("");
         
-        const filteredArticles = selectedCategory
-        ? post.filter((article) => article.acf.category.includes(selectedCategory))
-        : post;
-        console.log(selectedCategory)
+        const filteredArticles = post.filter((article) => {
+          const matchesCategory = selectedCategory
+            ? article.acf.category.includes(selectedCategory)
+            : true;
+          const matchesSearch =
+            article.title.rendered.toLowerCase().includes(searchTerm.toLowerCase()) || article.acf.writers_name.toLowerCase().includes(searchTerm.toLowerCase()) ;
+      
+          return matchesCategory && matchesSearch;
+        });
 
         const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
         const startIndex = (currentPage - 1) * articlesPerPage;
@@ -52,6 +55,7 @@ export default function Stories(){
             setSelectedCategory(category);
             setCurrentPage(1);
         };
+
     
     return <main className="stories_holder">
         
@@ -60,7 +64,7 @@ export default function Stories(){
         </section>
 
         <section className="search_container">
-        <input type="search" name="search" className="search" placeholder="Search"/>
+        <input type="search" name="search" className="search" placeholder="Search" onChange={((e)=>{setSearchTerm(e.target.value)})}/>
         <img src={search} alt="search icon" />
         </section>
 
@@ -68,11 +72,11 @@ export default function Stories(){
             {currentArticles.map((article,index)=>(
                 <div key={article.id} className="stories_card">
             <Card
-              category={article.acf.category[0]}
-              image={currentMedia[index]?.source_url}
-              title={article.title.rendered}
-              meta={article.acf.meta_description}
-              writer={article.acf.writers_name}
+              category={loading?"LOADING":article.acf.category[0]}
+              image={loading?spinner:currentMedia[index]?.source_url}
+              title={loading?"LOADING":article.title.rendered}
+              meta={loading?"LOADING":article.acf.meta_description}
+              writer={loading?"LOADING":article.acf.writers_name}
             />
                 </div>
             ))}

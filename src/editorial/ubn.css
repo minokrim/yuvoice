@@ -13,14 +13,25 @@
     width: 100%;
     justify-content: space-around;
     height: 100%;
-
 }
 .ubn-card{
-    padding: 20px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1040px) {
+    .ubn-card{
+        padding: 0px;
+        padding-left: 10px;
+    }
 }
 
 @media screen and (max-width: 660px) {
     .ubn-holder{
-        width: 100%;
+        width: 90%;
+        padding-bottom: 1em;
+        align-self: center;
+    }
+    .ubn-detail{
+        gap: 20px;
     }
 }

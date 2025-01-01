@@ -15,14 +15,12 @@ export default function ResponseProvider({children}){
               const articlesResponse = await axios.get(
                 "https://yuvoice.com/wp-json/wp/v2/article?per_page=100"
               );
-              console.log("Articles:", articlesResponse.data);
       
               setResponse(articlesResponse.data);
       
               const mediaIds = articlesResponse.data
                 .map((post) => post.featured_media)
                 .filter(Boolean);
-              console.log("Media IDs:", mediaIds);
       
               const mediaRequests = mediaIds.map((id) =>
                 axios.get(`https://yuvoice.com/wp-json/wp/v2/media/${id}`)
@@ -32,7 +30,6 @@ export default function ResponseProvider({children}){
               const mediaData = mediaResponses.map((response) => response.data);
       
               setMedia(mediaData);
-              console.log("Media Data:", mediaData);
             } catch (error) {
               console.error("Error fetching data:", error);
             }finally {
