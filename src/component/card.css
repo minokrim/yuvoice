@@ -39,7 +39,6 @@
     flex-direction: column;
     text-align: left;
     background-color: white;
-    max-width: 360px;
     height: 50%;
 }
 .card-detai-sec>h3{
