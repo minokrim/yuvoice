@@ -4,6 +4,7 @@
     width: 60%;
     text-align: left;
     align-items: center;
+    height: max-content;
 }
 .tw-heading{
     display: flex;
@@ -26,5 +27,36 @@
     gap: 50px;
 }
 .tw-content{
-    width: 360px;
+    width: 23em;
+}
+
+
+@media screen and (max-width: 1040px) {
+    .tw-heading>h2{
+        font-size: 18px;
+    }
+    .tw-content-holder{
+        gap: 20px;
+        justify-content: space-between;
+    
+    }
+    .tw-content{
+        width: 13em;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .tw-heading>h2{
+        font-size: 12px;
+    }
+    .tw-body{
+        width: 100%;
+    }
+    .tw-content-holder{
+        align-items: center;
+        justify-content: center;
+    }
+    .tw-content{
+        width: 80%;
+    }
 }
