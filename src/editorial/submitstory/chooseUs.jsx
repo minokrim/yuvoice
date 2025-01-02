@@ -8,7 +8,7 @@ export default function ChooseUs(){
     return <main className="flex flex-col mt-20 bg-gradient-to-b from-purple-600/20 to-orange-600/40">
         <h2 className="text-3xl font-bold text-purple-700 mt-10">Why Choose Us?</h2>
 
-        <div className="flex w-full mt-10">
+        <div className="flex flex-col w-full my-10 md:flex-row gap-10">
             <ChooseUsCard image={ge} reason={"Global Exposure"} explanation={"Reach audiences worldwide on a platform committed to inspiring and empowering individuals from diverse backgrounds."}/>
 
             <ChooseUsCard image={pg} reason={"Professional Guidance"} explanation={"Receive support and feedback from our world-class editors, ensuring your voice is polished and impactful."}/>
