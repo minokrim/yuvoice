@@ -4,6 +4,7 @@ import { MediaContext } from "../context/responseContext";
 import spinner from "../assets/spinner.svg"
 import UbnCard from "../component/ubncard";
 import "./ubn.css"
+
 export default function Ubn(){
     const post=useContext(ResponseContext);
     const {media,loading}=useContext(MediaContext)
@@ -16,9 +17,6 @@ export default function Ubn(){
         return { articles: slicedArticles, media: associatedMedia };
       };
 
-    if(loading){
-        return (<img src={spinner} alt="" />)
-    }
     
     const { articles: topArticles, media: associatedMedia } = getTopArticlesWithMedia(4);
 
@@ -30,10 +28,10 @@ export default function Ubn(){
             {topArticles.map((article,index)=>(
                 <div key={article.id} className="ubn-card">
                     <UbnCard 
-                    image={associatedMedia[index] && associatedMedia[index].source_url}
-                    title={article.title.rendered}
-                    meta={article.acf.meta_description}
-                    writer={article.acf.writers_name}
+                    image={loading?spinner:associatedMedia[index] && associatedMedia[index].source_url}
+                    title={loading?"LOADING":article.title.rendered}
+                    meta={loading?"LOADING":article.acf.meta_description}
+                    writer={loading?"LOADING":article.acf.writers_name}
                     />
                 </div>
             ))}

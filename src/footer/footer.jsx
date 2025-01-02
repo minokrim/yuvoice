@@ -7,8 +7,8 @@ import tweet from "../assets/tweet.png";
 import linkedin from "../assets/linkedin.png";
 
 export default function Footer(){
-    return <main className="footer-container">
-        <div className="footer-body">
+    return <main className="footer-container py-10">
+        <div className="footer-body items-center">
             <section className="footer-sec1">
                 <img src={logo} alt="" />
                 <p>Bringing you stories around the world</p>
@@ -23,7 +23,7 @@ export default function Footer(){
                 </div>
             </section>
 
-            <section className="footer-sec2">
+            <section className="footer-sec2 gap-5">
                 <p>Quick Links</p>
                 <div className="ql-options">
                     <div className="ql-option1">
@@ -45,7 +45,7 @@ export default function Footer(){
             </section>
         </div>
 
-        <section className="footer-sec4">
+        <section className="footer-sec4 mt-10">
             <h4>&copy; 2024 Yuvoice</h4>
             <h4>Privacy Policy</h4>
             <h4>Terms & Conditions</h4>

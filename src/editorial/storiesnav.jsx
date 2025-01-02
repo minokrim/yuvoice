@@ -1,6 +1,7 @@
 import React,{useContext,useState} from "react";
 import "./storiesnav.css"
-import { ResponseContext } from "../context/responseContext";
+import { MediaContext, ResponseContext } from "../context/responseContext";
+
 export default function NavStories({onCategorySelect}){
 
     const post=useContext(ResponseContext);
@@ -13,7 +14,6 @@ export default function NavStories({onCategorySelect}){
 
         const handleCategoryClick = (category) => {
             console.log("Selected Category:", category);
-            setSelectedCategory(category);
             onCategorySelect(category);
         };
         
@@ -22,7 +22,7 @@ export default function NavStories({onCategorySelect}){
             <h5 className={`cat ${selectedCategory === "" ? "active" : ""}`}onClick={() => handleCategoryClick("")}>All Stories</h5>
             {cat.map((category,index)=>(
                 <div key={index} className="storyNav-render">
-                    <h5 className={`cat ${selectedCategory === category ? "active" : ""}`}onClick={() => handleCategoryClick(category)}>{category}</h5>
+                    <h5 className={`cat ${selectedCategory === category ? "active" : ""}`}onClick={() => handleCategoryClick(category)}>{category||"LOADING"}</h5>
                 </div>
             ))}
         </section>
