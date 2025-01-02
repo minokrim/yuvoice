@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 export default function Guidelines(){
     return <main className="flex flex-col py-10">
         <section className="flex flex-col gap-5">
@@ -7,13 +7,13 @@ export default function Guidelines(){
             <p className="text-2xl">Read the details below to get started!</p>
         </section>
 
-        <section className="flex justify-center gap-40 mt-10">
-            <div className="w-[30%] flex flex-col">
+        <section className="flex flex-col justify-center gap-10 mt-10 md:flex-row md:gap-40">
+            <div className="w-full flex flex-col justify-center items-center md:w-[30%]">
                 <figure className="flex ">
                     <img src="" alt="" />
                     <figcaption className="text-2xl font-bold">Guidelines</figcaption>
                 </figure>
-                <ul className="flex flex-col text-left list-disc marker:text-black gap-1 mt-5 text-lg font-light">
+                <ul className="flex flex-col text-left list-disc marker:text-black gap-1 mt-0 text-lg font-light p-9 md:p-0 md:mt-5">
                     <li>Ensure you have the intellectual property rights 
                     to the piece you are submitting.</li>
                     <li>
@@ -27,12 +27,12 @@ export default function Guidelines(){
                     </li>
                 </ul>
             </div>
-            <div className="w-[30%] flex flex-col">
+            <div className="w-full flex flex-col justify-center items-center md:w-[30%]">
                 <figure className="flex ">
                     <img src="" alt="" />
                     <figcaption className="text-2xl font-bold">Submissions</figcaption>
                 </figure>
-                <ul className="flex flex-col text-left list-disc marker:text-black gap-1 mt-5 text-lg font-light">
+                <ul className="flex flex-col text-left list-disc marker:text-black gap-1 mt-0 text-lg font-light p-9 md:p-0 md:mt-5">
                     <li>If your piece has trigger warnings that readers should know about, please add them as a disclaimer for sensitivity.</li>
                     <li>
                     Please indicate how you would prefer to be credited: by your full name, by your first name, by your surname, by your pen name or anonymously (your writing will be credited to "Global Citizen").
@@ -47,9 +47,10 @@ export default function Guidelines(){
             </div>
         </section>
 
-        <section className="flex flex-col gap-10 mt-20 font-medium items-center w-full">
-            <p className="w-[35%]">Read our submission guidelines here to find out which editorial section your article story/poem best fits in.</p>
-            <p>Read our Contributor’s Agreement here.</p>
+        <section className="flex flex-col gap-10 mt-0 font-medium items-center w-full md:mt-20">
+            <p className="w-2/3 md:w-[35%]">Read our submission guidelines <a href="https://docs.google.com/document/d/1M47vcyqYAA4ubCmgtR4FE-l9IiVNyRH7K29v0vSaFbY/edit?tab=t.0" target="blank" rel="noreferrer" className="decoration cursor-pointer underline">here</a> to find out which editorial section your article story/poem best fits in.</p>
+            <p>Read our Contributor’s Agreement <a className="decoration cursor-pointer underline" href="https://docs.google.com/document/d/1RG2Q12zMSEDeH4lYnMjEoolasV8OfTxnu-wwdDqf4qE/edit?tab=t.0 " target="_blank" rel="noreferrer">here</a>.</p>
+
         </section>
     </main>
 }
