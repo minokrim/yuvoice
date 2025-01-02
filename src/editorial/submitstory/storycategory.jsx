@@ -7,9 +7,9 @@ export default function StoriesCategories(){
             <p className="text-base mt-5">We’re looking for real, raw, and impactful stories that fit into one of our key themes:</p>
         </section>
 
-        <section className="flex w-full gap-5 h-[90%] items-center justify-center">
+        <section className="h-[100%] md:flex w-full gap-5 h-[90%] items-center justify-center">
 
-        <div className="grid grid-cols-2 gap-5 w-[40em]">
+        <div className="grid grid-cols-1 border-4 w-full md:grid-cols-2 gap-5 w/2/4">
         <StoriesCategoriesCard category={"Brighter Tomorrow"} description={"Celebrate good news—stories of hope, innovation, and progress making a positive impact"}/>
             <StoriesCategoriesCard category={"Fiction"} description={"Share imaginative tales that explore journeys, futuristic worlds, or creative twists on life"}/>
             <StoriesCategoriesCard category={"Lifestyle & Relationship"} description={"Tell us about love, growth, and the lessons that shaped your life"}/>
