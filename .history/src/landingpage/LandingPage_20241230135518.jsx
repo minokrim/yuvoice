@@ -5,17 +5,15 @@ import background2 from "../assets/landingpage2.jpg";
 import Nav from "../nav/nav.jsx";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Footer from "../footer/footer";
+import Footer from "../footer/footer.jsx";
 import { ResponseContext } from "../context/responseContext.jsx";
 import { MediaContext } from "../context/responseContext.jsx";
-
 const LandingPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
   };
-  const post=useContext(ResponseContext);
+      const post=useContext(ResponseContext);
       const {media,loading}=useContext(MediaContext)
       const getTopArticlesWithMedia = (count) => {
         const slicedArticles = Array.isArray(post) ? post.slice(0, count) : [];
@@ -24,8 +22,7 @@ const LandingPage = () => {
         );
         return { articles: slicedArticles, media: associatedMedia };
       };
-
- const { articles: topArticles, media: associatedMedia } = getTopArticlesWithMedia(4);
+    const { articles: topArticles, media: associatedMedia } = getTopArticlesWithMedia(4);
   return (
     <div className="landing-page">
       {/* Header Section */}
@@ -37,8 +34,6 @@ const LandingPage = () => {
           infiniteLoop
           interval={5000}
           onChange={handleSlideChange}
-          showStatus={false}
-          showArrows={false}
           className="header-carousel"
         >
           <div>
@@ -81,14 +76,13 @@ const LandingPage = () => {
               in his mind so clearly.
             </p>
             <div className="author-info">
-              <span className="contact-symbol">👤</span> Wopicho Tony
-              <span className="location-symbol">📍</span> USA
+              <span className="contact-symbol">:bust_in_silhouette:</span> Wopicho Tony
+              <span className="location-symbol">:round_pushpin:</span> USA
             </div><br/>
             <button className="learn-more-btn">Read More</button>
           </div>
         )}
       </header>
-
      {/* Editorial Section */}
      <section className="editorial">
         <div className="editorial-content">
@@ -104,7 +98,7 @@ const LandingPage = () => {
               infiniteLoop
               autoPlay
               interval={5000}
-             
+              showStatus={false}
             >
               {topArticles.map((article,index)=>(
               <div className="editorial-card">
@@ -112,11 +106,7 @@ const LandingPage = () => {
               {/* <p className="legend">{article.title.rendered}</p> */}
               </div>
               ))}
-              <div className="editorial-card">
-                <img src="/path/to/image1.jpg" alt="Story 1" />
-                <p className="legend">Fiction</p>
-              </div>
-              <div className="editorial-card">
+              {/* <div className="editorial-card">
                 <img src="/path/to/image2.jpg" alt="Story 2" />
                 <p className="legend">Don't Stop Me</p>
               </div>
@@ -131,14 +121,12 @@ const LandingPage = () => {
               <div className="editorial-card">
                 <img src="/path/to/image5.jpg" alt="Story 5" />
                 <p className="legend">Beyond Horizons</p>
-              </div>
+              </div> */}
             </Carousel>
           </div>
         </div>
         <button className="read-more-btn">Read More</button>
       </section>
-
-
       {/* Platform Section */}
       {/* Platform Section */}
       <section className="platform">
@@ -146,7 +134,6 @@ const LandingPage = () => {
           Yuvoice <span className="highlight">Platform</span>
         </h2>
         <p>Yuvoice is creating an AI-Backed platform that will disrupt the modern internet.</p>
-
         <div className="platform-content">
           <div className="platform-box">
             <h3>We are actually <span className="highlight-social">"social"</span></h3>
@@ -171,8 +158,6 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-    
-
       {/* Subscribe Section */}
       <section className="subscribe">
         <h2>Yuvoice Platform: Social Media for Social Good – Coming Soon in 2025</h2>
@@ -183,13 +168,6 @@ const LandingPage = () => {
       </section>
       <Footer/>
     </div>
-
-    // Footer Section
-   
-
-
-
   );
 };
-
 export default LandingPage;

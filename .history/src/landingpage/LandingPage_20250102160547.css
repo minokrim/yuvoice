@@ -145,7 +145,7 @@ body {
   width: 7%;
   height: 30px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .legend {

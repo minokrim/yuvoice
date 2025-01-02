@@ -16,16 +16,15 @@ const LandingPage = () => {
     setCurrentSlide(index);
   };
   const post=useContext(ResponseContext);
-      const {media,loading}=useContext(MediaContext)
-      const getTopArticlesWithMedia = (count) => {
-        const slicedArticles = Array.isArray(post) ? post.slice(0, count) : [];
-        const associatedMedia = slicedArticles.map((article) =>
-          media.find((mediaItem) => mediaItem.id === article.featured_media)
-        );
-        return { articles: slicedArticles, media: associatedMedia };
-      };
-
- const { articles: topArticles, media: associatedMedia } = getTopArticlesWithMedia(4);
+  const {media,loading}=useContext(MediaContext)
+  const getTopArticlesWithMedia = (count) => {
+    const slicedArticles = Array.isArray(post) ? post.slice(0, count) : [];
+    const associatedMedia = slicedArticles.map((article) =>
+      media.find((mediaItem) => mediaItem.id === article.featured_media)
+    );
+    return { articles: slicedArticles, media: associatedMedia };
+  };
+const { articles: topArticles, media: associatedMedia } = getTopArticlesWithMedia(4);
   return (
     <div className="landing-page">
       {/* Header Section */}
@@ -106,12 +105,6 @@ const LandingPage = () => {
               interval={5000}
              
             >
-              {topArticles.map((article,index)=>(
-              <div className="editorial-card">
-              <img src={associatedMedia[index] && associatedMedia[index].source_url} alt="Story 1" />
-              {/* <p className="legend">{article.title.rendered}</p> */}
-              </div>
-              ))}
               <div className="editorial-card">
                 <img src="/path/to/image1.jpg" alt="Story 1" />
                 <p className="legend">Fiction</p>

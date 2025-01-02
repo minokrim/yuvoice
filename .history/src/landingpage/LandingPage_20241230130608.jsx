@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, {useState,useContext} from "react";
 import "./LandingPage.css";
 import background1 from "../assets/landingpage.jpg";
 import background2 from "../assets/landingpage2.jpg";
@@ -16,16 +16,15 @@ const LandingPage = () => {
     setCurrentSlide(index);
   };
   const post=useContext(ResponseContext);
-      const {media,loading}=useContext(MediaContext)
-      const getTopArticlesWithMedia = (count) => {
-        const slicedArticles = Array.isArray(post) ? post.slice(0, count) : [];
-        const associatedMedia = slicedArticles.map((article) =>
-          media.find((mediaItem) => mediaItem.id === article.featured_media)
-        );
-        return { articles: slicedArticles, media: associatedMedia };
-      };
-
- const { articles: topArticles, media: associatedMedia } = getTopArticlesWithMedia(4);
+  const {media,loading}=useContext(MediaContext)
+  const getTopArticlesWithMedia = (count) => {
+    const slicedArticles = Array.isArray(post) ? post.slice(0, count) : [];
+    const associatedMedia = slicedArticles.map((article) =>
+      media.find((mediaItem) => mediaItem.id === article.featured_media)
+    );
+    return { articles: slicedArticles, media: associatedMedia };
+  };
+const { articles: topArticles, media: associatedMedia } = getTopArticlesWithMedia(4);
   return (
     <div className="landing-page">
       {/* Header Section */}
@@ -112,11 +111,11 @@ const LandingPage = () => {
               {/* <p className="legend">{article.title.rendered}</p> */}
               </div>
               ))}
-              <div className="editorial-card">
+              {/* <div className="editorial-card">
                 <img src="/path/to/image1.jpg" alt="Story 1" />
                 <p className="legend">Fiction</p>
-              </div>
-              <div className="editorial-card">
+              </div> */}
+              {/* <div className="editorial-card">
                 <img src="/path/to/image2.jpg" alt="Story 2" />
                 <p className="legend">Don't Stop Me</p>
               </div>
@@ -131,7 +130,7 @@ const LandingPage = () => {
               <div className="editorial-card">
                 <img src="/path/to/image5.jpg" alt="Story 5" />
                 <p className="legend">Beyond Horizons</p>
-              </div>
+              </div> */}
             </Carousel>
           </div>
         </div>

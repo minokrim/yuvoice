@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState } from "react";
 import "./LandingPage.css";
 import background1 from "../assets/landingpage.jpg";
 import background2 from "../assets/landingpage2.jpg";
@@ -6,8 +6,6 @@ import Nav from "../nav/nav.jsx";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "../footer/footer";
-import { ResponseContext } from "../context/responseContext.jsx";
-import { MediaContext } from "../context/responseContext.jsx";
 
 const LandingPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,17 +13,7 @@ const LandingPage = () => {
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
   };
-  const post=useContext(ResponseContext);
-      const {media,loading}=useContext(MediaContext)
-      const getTopArticlesWithMedia = (count) => {
-        const slicedArticles = Array.isArray(post) ? post.slice(0, count) : [];
-        const associatedMedia = slicedArticles.map((article) =>
-          media.find((mediaItem) => mediaItem.id === article.featured_media)
-        );
-        return { articles: slicedArticles, media: associatedMedia };
-      };
 
- const { articles: topArticles, media: associatedMedia } = getTopArticlesWithMedia(4);
   return (
     <div className="landing-page">
       {/* Header Section */}
@@ -37,8 +25,6 @@ const LandingPage = () => {
           infiniteLoop
           interval={5000}
           onChange={handleSlideChange}
-          showStatus={false}
-          showArrows={false}
           className="header-carousel"
         >
           <div>
@@ -104,14 +90,9 @@ const LandingPage = () => {
               infiniteLoop
               autoPlay
               interval={5000}
-             
+              showStatus={false}
+              showArrows={false}
             >
-              {topArticles.map((article,index)=>(
-              <div className="editorial-card">
-              <img src={associatedMedia[index] && associatedMedia[index].source_url} alt="Story 1" />
-              {/* <p className="legend">{article.title.rendered}</p> */}
-              </div>
-              ))}
               <div className="editorial-card">
                 <img src="/path/to/image1.jpg" alt="Story 1" />
                 <p className="legend">Fiction</p>
