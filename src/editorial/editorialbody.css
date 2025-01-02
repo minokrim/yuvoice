@@ -1,0 +1,23 @@
+.body-container{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgb(102, 45, 145,0.2), #ffffff 30%);
+    height: max-content;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.sec-2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+    gap: 30px;
+
+}
+@media screen and (max-width: 660px) {
+    .sec-2{
+        flex-direction: column;
+    }
+}
