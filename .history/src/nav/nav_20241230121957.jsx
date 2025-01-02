@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import "./nav.css"
 import dropdown from "../assets/dropdown.png";
 import logo from "../assets/logo.png";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import hamburger from "../assets/hamburger.png"
 export default function Nav(){
     const[mobileNav,setMobileNav]=useState(false)
