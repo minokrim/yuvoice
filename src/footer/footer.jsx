@@ -7,7 +7,7 @@ import tweet from "../assets/tweet.png";
 import linkedin from "../assets/linkedin.png";
 
 export default function Footer(){
-    return <main className="footer-container py-10">
+    return <main className="footer-container">
         <div className="footer-body items-center">
             <section className="footer-sec1">
                 <img src={logo} alt="" />
