@@ -9,7 +9,7 @@ import Form from "./form";
 import Footer from "../../footer/footer"
 export default function SubmitStoryBody(){
     return <main className="flex flex-col">
-        <section className="flex flex-col bg-gradient-to-b from-purple-600/30 to-white">
+        <section className="flex flex-col bg-gradient-to-b pb-10">
         <Nav/>
         <SubmitHeader/> 
         </section>

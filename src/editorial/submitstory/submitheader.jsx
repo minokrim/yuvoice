@@ -3,7 +3,7 @@ import tellus from "../../assets/tellus.png"
 import news from "../../assets/news.png"
 
 export default function SubmitHeader(){
-    return <main className="flex items-center justify-center">
+    return <main className="flex items-center justify-center p-5">
         <div className="flex flex-col w-[85%] rounded-xl shadow-2xl p-5 bg-white">
             <section className="flex flex-col items-center text-center md:flex-row">
                 <h1 className="text-2xl md:text-4xl font-semibold">Submit your story - </h1>
@@ -16,7 +16,7 @@ export default function SubmitHeader(){
                 <img src={news} alt="" className="w-full sm:w-3/4 md:w-2/4"/>
             </section>
 
-            <section className="flex justify-center md:justify-start">
+            <section className="flex justify-center md:justify-start mt-5 md:mt-0">
                 <button className="w-1/8 bg-[#662D91] text-white rounded-lg p-2 text-xl px-5" >Submit</button>
             </section>
         </div>
