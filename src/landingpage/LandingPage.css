@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     color: #333;
   }
+
   
   .landing-page {
     width: 100%;
@@ -28,6 +29,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     color: white;
+    bottom: 120px;
+    z-index: -2;
   }
   
   .header-carousel img {
@@ -45,11 +48,10 @@ body {
     z-index: 2;
     font-size: 25px;
   }
-  .header-content h2 {
-    font-size: 3rem; /* Adjust size as needed */
-     /* Makes the text bold */
-    color: blue; /* Sets the text color to blue */
+  .header-content>h2 {
+    font-size: 3rem; 
   }
+
   
   .vision-title,
   .belief-title {
@@ -109,13 +111,14 @@ body {
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: #000; /* Ensure text is clearly visible */
+
 }
 
 .editorial h2 .highlight-editorial {
   color: #f05454; /* Highlight color */
 }
 
-.editorial p {
+.editorial>p {
   margin-top: 10px;
   margin-bottom: 30px;
   font-size: 1.2rem;
@@ -123,10 +126,54 @@ body {
 }
 
 .carousel-wrapper {
-  margin: 30px auto;
+  display: flex;
+  /* margin: 30px auto;
   max-width: 90%;
-  position: relative;
+  position: relative; */
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
+.carousel-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.carousel-content.scale-110 {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.carousel-content.scale-90 {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+.car {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3rem;
+  width:100%;
+}
+.carousel-card{
+  height: 15em;
+  width: 80%;
+  object-fit: cover;
+  border-radius: 20px;
+  --r: 25px; 
+  --s: 40px; 
+  --_m:/calc(2*var(--r)) calc(2*var(--r))
+    radial-gradient(#000 70%,#0000 72%) no-repeat;
+    mask:
+    right 0 bottom calc(var(--s) + var(--r)) var(--_m),
+    right calc(var(--s) + var(--r)) bottom 0 var(--_m),
+    radial-gradient(var(--s) at 100% 100%,#0000 99%,#000 101%) 
+     calc(-1*var(--r)) calc(-1*var(--r)) no-repeat,
+    conic-gradient(from 90deg at calc(100% - var(--s) - 2*var(--r)) calc(100% - var(--s) - 2*var(--r)),
+     #0000 25%,#000 0);
+}
+
 
 .editorial-card {
   display: flex;
@@ -180,8 +227,6 @@ body {
 .editorial-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -192,7 +237,9 @@ body {
   .platform {
     padding: 50px 20px;
     text-align: center;
-    background: linear-gradient(to right, #f8f9fa, #f1e3f8);
+  }
+  .br{
+    border:2px solid red
   }
   
   .platform h2 {
@@ -243,16 +290,6 @@ body {
     font-weight: bold;
   }
   
-  .platform-box ul {
-    list-style: none;
-    padding: 0;
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-  
-  .platform-box ul li {
-    margin-bottom: 10px;
-  }
   
   .platform-box img {
     width: 100%;
@@ -278,7 +315,7 @@ body {
     background-color: #6c63ff;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 20px 20px;
   }
   
   .subscribe h2 {
@@ -313,6 +350,7 @@ body {
   .subscribe button:hover {
     background-color: #4236b8;
   }
+
   
   /* Responsive Design */
   @media (max-width: 768px) {
