@@ -1,10 +1,9 @@
 import React from "react";
 import person from "../assets/person.png"
-import place from "../assets/placeholder.jpg"
 import readmore from "../assets/readmore.png"
 import './card.css'
 export default function Card({category,image,title,meta,writer}){
-    return <main className="card- shadow-md">
+    return <main className="card-body shadow-md">
         <section className="card-img-sec">
             <img src={image} alt="" />
             <p>{category}</p>

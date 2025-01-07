@@ -23,7 +23,7 @@ export default function Thisweek(){
 
     return <main className="tw-body">
         <section className="tw-heading">
-            <h2>This Week Stories</h2>
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-b from-purple-600 to-blue-600">This Week Stories</h2>
             <div className="tw-vr"></div>
         </section>
         <section className="tw-content-holder">

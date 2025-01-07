@@ -14,7 +14,7 @@
     border-radius: 10px;
     object-fit: cover;
     width: 50%;
-    height: 100%;
+    height: 80%;
 }
 .ubnCard-detail{
     display: flex;
@@ -22,6 +22,8 @@
     text-align: left;
     margin-left: 10px;
     width: 50%;
+    height: 80%;
+
 }
 .ubnCard-detail h3{
     font-size: 1em;

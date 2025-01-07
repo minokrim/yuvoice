@@ -2,13 +2,36 @@ import React,{useState} from "react";
 import "./nav.css"
 import dropdown from "../assets/dropdown.png";
 import logo from "../assets/logo.png";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import hamburger from "../assets/hamburger.png"
+import EditorialDropDown from "../component/editorialDropdown";
+import GetinvolvedDropDown from "../component/getinvolveddropdown";
+import AboutDropDown from "../component/aboutdropdown";
+import useDropdown from "../hooks/useDropDown";
+
 export default function Nav(){
-    const[mobileNav,setMobileNav]=useState(false)
+    const[mobileNav,setMobileNav]=useState(false);
+    const [dropdownState, setDropdownState] = useState({
+        editorial: false,
+        getInvolved: false,
+        about: false,
+      });
+    const editorialDropdown = useDropdown();
+    const getInvolvedDropdown = useDropdown();
+    const aboutDropdown = useDropdown();
+
     function handleClick(){
         setMobileNav(!mobileNav)
     }
+
+    const handleDropdownClick = (dropdownName) => {
+        setDropdownState((prevState) => ({
+          ...prevState,
+          [dropdownName]: !prevState[dropdownName],
+        }));
+      };
+
+
 
     return <main className="nav-Body">
 
@@ -21,31 +44,78 @@ export default function Nav(){
         <section className="nav-right">
             <p>Home</p>
 
-            <div className="nav-option">
-            <p>Editorial</p>
-            <img src={dropdown} alt="dropDown" />
+            <div className="nav-option" onMouseEnter={editorialDropdown.handleMouseEnter} onMouseLeave={editorialDropdown.handleMouseLeave}>
+            <Link to="/editorial" className="text-black no-underline">Editorial</Link>
+            <img src={dropdown} alt="dropDown"/>
+            <section className="dropdown">
+            {editorialDropdown.isVisible && <EditorialDropDown/>}
+            </section>
+            </div>
+            
+            <div className="nav-option" onMouseEnter={getInvolvedDropdown.handleMouseEnter} onMouseLeave={getInvolvedDropdown.handleMouseLeave}>
+            <Link to="/" className="text-black no-underline">Get Involved</Link>
+            <img src={dropdown} alt="dropDown"/>
+            <section className="dropdown dropdown2">
+            {getInvolvedDropdown.isVisible && <GetinvolvedDropDown/>}
+            </section>
             </div>
 
-            <div className="nav-option">
-            <p>Get Involved</p>
-            <img src={dropdown} alt="dropDown" />
+            <div className="nav-option" onMouseEnter={aboutDropdown.handleMouseEnter} onMouseLeave={aboutDropdown.handleMouseLeave}>
+            <Link to="/" className="text-black no-underline">About</Link>
+            <img src={dropdown} alt="dropDown"/>
+            <section className="dropdown dropdown2">
+            {aboutDropdown.isVisible && <AboutDropDown/>}
+            </section>
             </div>
-
-            <p>About</p>
-
         </section>
 
         {mobileNav && (
         <section className="mobileNavOptions" id="mobileNav" onClick={handleClick}>
             <p>Home</p>
+          <div
+            className="nav-option"
+            onClick={(e) => {
+              e.stopPropagation(); 
+              handleDropdownClick("editorial");
+            }}
+          >
             <p>Editorial</p>
+            <img src={dropdown} alt="dropDown"/>
+            <section className="dropdown">
+            {dropdownState.editorial && <EditorialDropDown/>}
+            </section>
+          </div>
+
+
+          <div
+            className="nav-option"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleDropdownClick("getInvolved");
+            }}
+          >
             <p>Get Involved</p>
+            <img src={dropdown} alt="dropDown"/>
+            <section className="dropdown dropdown2">
+            {dropdownState.getInvolved && <GetinvolvedDropDown />}
+            </section>
+          </div>
+
+          <div
+            className="nav-option"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleDropdownClick("about");
+            }}
+          >
             <p>About</p>
-            {/* <Link to="/" className="Link">Home</Link>
-            <Link to="/" className="Link">Editorial</Link>
-            <Link to="/" className="Link">Get Involved</Link>
-            <Link to="/" className="Link">About</Link> */}
+            <img src={dropdown} alt="dropDown"/>
+            <section className="dropdown dropdown2">
+            {dropdownState.about && <AboutDropDown />}
+            </section>
+          </div>
         </section>
+
         )}
     </main>
 }
