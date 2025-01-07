@@ -178,7 +178,7 @@ export default function Form(){
             </section>
 
             <section className="flex items-center justify-center">
-                <button type="submit" className="bg-black text-white py-4 px-10 font-bold text-lg hover:bg-purple-700">Submit</button>
+                <button type="submit" className="bg-black text-white py-4 px-10 font-bold text-lg hover:bg-purple-700 border-none">Submit</button>
             </section>
         </form>
     </main>

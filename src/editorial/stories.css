@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    row-gap: 10em;
+    row-gap: 5em;
     margin-top: 50px;
 }
 .stories_card{
@@ -38,7 +38,7 @@
     padding-left: 10px;
     font-size: 16px;
 }
-.search_container img{
+.search_container .search_icon{
     position: fixed;
     width: auto;
     height: 1.5em;
@@ -82,7 +82,26 @@
 
 
   @media screen and (max-width: 660px) {
+    .stories_holder{
+      justify-content: center;
+      width: 90%;
+    }
+    .search_container{
+      justify-items: center;
+      align-items: center;
+    }
+    .search_container .search_icon{
+      left: -40px;
+    }
     .search_container>input{
       width: 14em;
+      margin-right: 0px;
+    }
+    .stories_articles{
+      align-items: center;
+      justify-content: center;
+    }
+    .stories_articles{
+      row-gap: 3em;
     }
   }

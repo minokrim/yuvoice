@@ -9,7 +9,7 @@
     border-radius: 20px;
     padding-left: 2em;
     padding-bottom: 0em;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 0px 0px 5px 0px black;
     position: relative;
     z-index: 10;
     padding-bottom: 2em;
@@ -22,8 +22,9 @@
 }
 .main-edit-title{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    align-items: center;
+    align-items: left;
 }
 .main-edit-title h1{
     font-size: 2em;
@@ -31,6 +32,7 @@
     width: max-content;
     display: flex;
     align-items: center;
+    margin-bottom: 0px;
 }
 .main-edit-title span{
     display: flex;
@@ -40,10 +42,13 @@
     width: 50%;
     align-items: center;
     text-align: center;
+    padding-top: 0px;
+    margin-top: 0px;
 }
 .header-render-cont{
     display: flex;
     width: 100%;
+    margin-top: 2em;
 }
 .section-containers{
     display: flex;
@@ -192,14 +197,16 @@ figure>p{
 }
 
 @media screen and (max-width: 660px) {
-    .main-edit-title h1{
-        font-size: 1em;
+    .header-body{
+        width: 80%;
+        padding: 20px;
+    }
+    .main-edit-title{
+        flex-direction: column;
     }
     .main-edit-title span{
-        font-size: 0.7em;
-    }
-    .header-body{
-        padding: 10px;
+        width: 100%;
+        text-align: left;
     }
     .section-containers{
         flex-direction: column;

@@ -1,4 +1,6 @@
 import React from "react";
+import { RiFileEditLine } from "react-icons/ri";
+import { HiDocumentCheck } from "react-icons/hi2";
 
 export default function Guidelines(){
     return <main className="flex flex-col py-10">
@@ -9,8 +11,8 @@ export default function Guidelines(){
 
         <section className="flex flex-col justify-center gap-10 mt-10 md:flex-row md:gap-40">
             <div className="w-full flex flex-col justify-center items-center md:w-[30%]">
-                <figure className="flex ">
-                    <img src="" alt="" />
+                <figure className="flex items-center justify-center w-full md:justify-start ">
+                    <RiFileEditLine color="white" className="text-5xl bg-purple-800 rounded-lg p-2"/>
                     <figcaption className="text-2xl font-bold">Guidelines</figcaption>
                 </figure>
                 <ul className="flex flex-col text-left list-disc marker:text-black gap-1 mt-0 text-lg font-light p-9 md:p-0 md:mt-5">
@@ -27,9 +29,9 @@ export default function Guidelines(){
                     </li>
                 </ul>
             </div>
-            <div className="w-full flex flex-col justify-center items-center md:w-[30%]">
-                <figure className="flex ">
-                    <img src="" alt="" />
+            <div className="w-full flex flex-col justify-center md:justify-start lg:justify-center items-center md:w-[30%]">
+                <figure className="flex items-center justify-center w-full md:justify-start">
+                    <HiDocumentCheck color="white" className="text-5xl bg-purple-800 rounded-lg p-2"/>
                     <figcaption className="text-2xl font-bold">Submissions</figcaption>
                 </figure>
                 <ul className="flex flex-col text-left list-disc marker:text-black gap-1 mt-0 text-lg font-light p-9 md:p-0 md:mt-5">
