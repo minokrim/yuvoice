@@ -89,6 +89,7 @@ const responsive = {
   }
 }
 
+
   return (
     <div className="landing-page">
       {/* Header Section */}
@@ -224,11 +225,13 @@ const responsive = {
 
       <form className="mt-10">
         <h3 className="text-4xl font-light text-purple-800">SUBSCRIBE NOW!</h3>
-        <section className=" flex gap-5 justify-center mt-5">
+        <section className="sub flex gap-5 justify-center mt-5">
         <input type="email" placeholder="Email Address" className="w-[30%] h-[2em]"/>
         <button type="submit" className="bg-purple-800 text-white text-lg font-medium border-none">Subscribe</button>
         </section>
         </form>
+
+
 
       <Footer/>
     </div>

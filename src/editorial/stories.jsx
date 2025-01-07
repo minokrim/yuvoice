@@ -2,12 +2,13 @@ import React,{useContext,useState} from "react";
 import { MediaContext } from "../context/responseContext";
 import { ResponseContext } from "../context/responseContext";
 import spinner from "../assets/spinner.svg"
-import search from "../assets/search.png"
 import rarrow from "../assets/right-arrow.png"
 import larrow from "../assets/left-arrow.png"
 import Card from "../component/card";
 import "./stories.css"
 import NavStories from "./storiesnav";
+import { IoSearchSharp } from "react-icons/io5";
+
 
 export default function Stories(){
     const post=useContext(ResponseContext)
@@ -65,7 +66,8 @@ export default function Stories(){
 
         <section className="search_container">
         <input type="search" name="search" className="search" placeholder="Search" onChange={((e)=>{setSearchTerm(e.target.value)})}/>
-        <img src={search} alt="search icon" />
+        {/* <img src={search} alt="search icon" /> */}
+        <IoSearchSharp className="search_icon" color="white"/>
         </section>
 
         <section className="stories_articles">

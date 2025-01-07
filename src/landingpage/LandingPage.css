@@ -1,11 +1,11 @@
 /* General Styles */
-body {
+/* body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
-  }
+  } */
 
   
   .landing-page {
@@ -384,6 +384,13 @@ body {
     .platform-images img {
       width: 100px;
       height: 100px;
+    }
+  }
+
+  @media(max-width: 660px){
+    .sub{
+      gap:2px;
+
     }
   }
   

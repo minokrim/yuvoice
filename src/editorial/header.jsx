@@ -22,7 +22,7 @@ export default function Header() {
     <main className="header-body">
       <section className="header-container">
         <div className="main-edit-title">
-          <h1>Brighter Tomorrow-</h1>
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-purple-600 to-blue-600">Brighter Tomorrow</h1>
           <span>Highlighting exemplar stories from around the world</span>
         </div>
         <div className="header-render-cont">
