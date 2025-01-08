@@ -11,7 +11,7 @@ function App() {
       <ResponseProvider>
       <Routes>
         <Route path='/' element={<Body/>}/>
-        <Route path='/editorialbody' element={<EditorialBody/>}/>
+        <Route path='/' element={<EditorialBody/>}/>
         <Route path='/submitstory' element={<SubmitStoryBody/>}/>
         </Routes>
       </ResponseProvider>
