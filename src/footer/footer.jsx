@@ -15,10 +15,19 @@ export default function Footer(){
                 <div className="social-sec">
                     <p>Social Links</p>
                     <section className="social-images">
-                        <img src={ig} alt="" />
-                        <img src={linkedin} alt="" />
-                        <img src={fb} alt="" />
-                        <img src={tweet} alt="" />
+                        <a href="https://www.instagram.com/yuvoiceorg/" target="_blank" rel="noreferrer">
+                        <img src={ig} alt="" className="w-5"/>
+                        </a>
+                        <a href="https://www.linkedin.com/company/yuvoiceorg" target="_blank" rel="noreferrerx">
+                        <img src={linkedin} alt="" className="w-5"/>
+                        </a>
+                        <a href="https://www.facebook.com/yuvoiceorg/" target="_blank" rel="noreferrer">
+                        <img src={fb} alt="" className="w-5"/>
+                        </a>
+                        <a href="">
+                        <img src={tweet} alt="" className="w-5"/>
+
+                        </a>
                     </section>
                 </div>
             </section>
