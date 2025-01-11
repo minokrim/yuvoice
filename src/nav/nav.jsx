@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import "./nav.css"
 import dropdown from "../assets/dropdown.png";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.png";
 import { Link } from "react-router-dom";
 import hamburger from "../assets/hamburger.png"
 import EditorialDropDown from "../component/editorialDropdown";
@@ -36,13 +36,15 @@ export default function Nav(){
     return <main className="nav-Body">
 
         <section className="nav-left">
-            <img src={logo} alt="logo" />
+          <Link to="/">
+          <img src={logo} alt="logo" />
+          </Link>
             <img src={hamburger} alt="hamburger icon" id="hamburger" onClick={handleClick}/>
 
         </section>
 
         <section className="nav-right">
-            <p>Home</p>
+            <Link to="/" className="text-black no-underline">Home</Link>
 
             <div className="nav-option" onMouseEnter={editorialDropdown.handleMouseEnter} onMouseLeave={editorialDropdown.handleMouseLeave}>
             <Link to="/editorial" className="text-black no-underline">Editorial</Link>

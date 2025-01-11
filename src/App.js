@@ -10,7 +10,7 @@ function App() {
       <HashRouter>
       <ResponseProvider>
       <Routes>
-        <Route path='/' element={<Body/>}/>
+        {/* <Route path='/' element={<Body/>}/> */}
         <Route path='/' element={<EditorialBody/>}/>
         <Route path='/submitstory' element={<SubmitStoryBody/>}/>
         </Routes>

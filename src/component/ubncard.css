@@ -66,8 +66,8 @@
     }
     .ubnCard-detail>p{
         font-size: 0.5em;
-        overflow: hidden;
-        height: 41px;
+        /* overflow: hidden; */
+        height: 100%;
     }
     .ubnCard-writer>img{
         height: 0.5em;
@@ -76,3 +76,16 @@
         font-size: 0.5em;
     }
 }
+
+/* @media screen and (max-width: 660px) {
+    .ubnCard-holder{
+        flex-direction: column;
+        border: 1px solid red;
+        width: 0%;
+
+    }
+    .ubnCard-holder>img{
+        height: 7em;
+        width: 60%;
+    }
+} */

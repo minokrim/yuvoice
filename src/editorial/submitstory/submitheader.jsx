@@ -2,6 +2,12 @@ import React from "react";
 import tellus from "../../assets/tellus.png"
 import news from "../../assets/news.png"
 
+const scrollToForm = () => {
+    const formSection = document.getElementById("form-sec");
+    if (formSection) {
+        formSection.scrollIntoView({ behavior: "smooth" });
+    }
+};
 export default function SubmitHeader(){
     return <main className="flex items-center justify-center p-5">
         <div className="flex flex-col w-[85%] rounded-xl shadow-2xl p-5 px-10 bg-white">
@@ -16,8 +22,8 @@ export default function SubmitHeader(){
                 <img src={news} alt="" className="w-full sm:w-3/4 md:w-[30em] rounded-xl"/>
             </section>
 
-            <section className="flex justify-center md:justify-start mt-5 lg:mt-0">
-                <button className="w-1/8 bg-[#662D91] text-white rounded-lg p-2 text-xl px-5 border-none" >Submit</button>
+            <section className="flex justify-center md:justify-start mt-5 lg:mt-0" onClick={scrollToForm}>
+                <button className="w-1/8 bg-[#662D91] text-white rounded-lg p-2 text-xl px-5 border-none">Submit</button>
             </section>
         </div>
     </main>
