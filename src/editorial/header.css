@@ -142,7 +142,8 @@ figure>p{
     display: flex;
     flex-direction: column;
     text-align: left;
-    height: 10em;
+    height: 100%;
+
 }
 .section-b-details-holder>h2{
     font-size: 1.2em;
@@ -163,6 +164,7 @@ figure>p{
     line-height: 1.2;
     margin-top: 0px;
     padding-top: 0px;
+    justify-content: space-between;
 }
 .section-b-details-holder>figure{
     display: flex;
@@ -186,9 +188,11 @@ figure>p{
     }
     .section-b-details-holder>h2{
         font-size: 0.6em;
+
     }
     .section-b-details-holder>p{
         font-size: 0.8em;
+
     }
     .section-b-media-holder>img{
         width: 11em;
@@ -210,7 +214,6 @@ figure>p{
     }
     .section-containers{
         flex-direction: column;
-
     }
     .section-a{
         width: 100%;

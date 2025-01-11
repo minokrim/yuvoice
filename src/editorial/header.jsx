@@ -3,6 +3,7 @@ import { ResponseContext, MediaContext } from "../context/responseContext";
 import "./header.css";
 import spinner from "../assets/spinner.svg";
 import person from "../assets/person.png";
+import fallback from "../assets/ldsvg3.png"
 
 export default function Header() {
   const post = useContext(ResponseContext);
@@ -30,14 +31,15 @@ export default function Header() {
               <section className="section-a">
                 <div className="section-a-left">
                   {filteredMedia.length > 0 && (
-                    <img src={loading?spinner:filteredMedia[0].source_url} alt="" />
+                    <img src={loading?spinner:filteredMedia[0].source_url} alt=""   onError={(e) => e.target.src = {fallback}} 
+/>
                   )}
                   {filteredPosts.length > 0 && (
                     <div className="sec-a-details">
                       <div className="sec-a-detail1">
                         <h2>{loading?"LOADING":filteredPosts[0].title.rendered}</h2>
                         <figure>
-                          <img src={person} alt="user icon" />
+                          <img src={person} alt="user icon"   onError={(e) => e.target.src = {fallback}}/>
                           <p>{loading?"LOADING":filteredPosts[0].acf.writers_name}</p>
                         </figure>
                       </div>
@@ -53,7 +55,7 @@ export default function Header() {
                 <div className="section-b-media">
                   {filteredMedia.slice(1).map((item, index) => (
                     <div key={item.id} className="section-b-media-holder">
-                      <img src={loading?spinner:item.source_url} alt="" />
+                      <img src={loading?spinner:item.source_url} alt=""   onError={(e) => e.target.src = {fallback}}/>
                     </div>
                   ))}
                 </div>
@@ -64,7 +66,7 @@ export default function Header() {
                       <h2>{loading?"LOADING":postItem.title.rendered}</h2>
                       <p>{loading?"LOADING":postItem.acf.meta_description}</p>
                       <figure>
-                        <img src={person} alt="user icon" />
+                        <img src={person} alt="user icon"   onError={(e) => e.target.src = {fallback}}/>
                         <p>{loading?"LOADING":postItem.acf.writers_name}</p>
                       </figure>
                     </div>

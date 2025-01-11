@@ -14,7 +14,7 @@ export default function Card({category,image,title,meta,writer}){
             <div className="card-footer">
                 <section className="card-footer-writer">
                 <img src={person} alt="writer icon" />
-                <p>{writer}</p>
+                <p className="writer overflow-hidden h-6">{writer}</p>
                 </section>
                 <section className="read-more">
                     <p>Read more</p>
