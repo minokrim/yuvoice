@@ -10,10 +10,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 85%;
     height: 100%;
     justify-content: space-around;
-
 }
 .ubn-card{
     padding: 0px 10px 0px 10px;
@@ -28,7 +27,7 @@
 
 @media screen and (max-width: 660px) {
     .ubn-holder{
-        width: 90%;
+        width: 80%;
         padding-bottom: 1em;
         align-self: center;
     }

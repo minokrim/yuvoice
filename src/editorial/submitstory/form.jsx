@@ -24,7 +24,6 @@ export default function Form(){
     const handleChange = (event) => {
         const { name, value, type, files } = event.target;
       
-        // Handle file input separately
         if (type === "file") {
           const file = files[0];
       
@@ -48,7 +47,6 @@ export default function Form(){
             };
           }
         } else {
-          // Handle other types of input
           setFormData((prevData) => ({
             ...prevData,
             [name]: value,
@@ -102,6 +100,18 @@ export default function Form(){
             (response) => {
               console.log("Success!", response.status, response.text);
               alert("Form submitted successfully!");
+              setFormData({
+                email: "",
+                first_name: "",
+                last_name: "",
+                country: "",
+                phone_number: "",
+                pen_name: "",
+                section: "",
+                article: "",
+                document: null,
+                agreement: false,
+              });
             },
             (error) => {
               console.log("Failed...", error);
@@ -111,7 +121,7 @@ export default function Form(){
       };
 
     
-    return <main className="flex flex-col items-center">
+    return <main className="flex flex-col items-center" id="form-sec">
         <form onSubmit={handleSubmit} className="flex flex-col w-2/3 gap-10">
 
             <section className="flex flex-col text-left text-gray-500 text-xl font-medium">
@@ -160,10 +170,10 @@ export default function Form(){
             <input type="url" name="article" id="article" placeholder="Please ensure that there is viewing access to the document that you are providing a link to." className="border border-black border-1 h-[2em]" value={formData.article} onChange={handleChange}/>
             </section>
 
-            <section className="flex flex-col text-left text-gray-500 text-xl font-medium">
+            {/* <section className="flex flex-col text-left text-gray-500 text-xl font-medium">
             <label htmlFor="document">Supporting Documents</label>
             <input type="file" name="document" id="document" onChange={handleChange} placeholder="Choose Files" className="h-[2em]"/>
-            </section>
+            </section> */}
 
             <section className="flex flex-col">
                 <h2 className="font-semibold text-gray-600 text-2xl text-center md:text-left">By submitting, I agree to have my piece edited, and to the terms and conditions of the website and the Contributor Agreement.</h2>
