@@ -15,7 +15,6 @@ export default function ResponseProvider({children}){
               const articlesResponse = await axios.get(
                 "https://yuvoice.com/wp-json/wp/v2/article?per_page=100"
               );
-      
               setResponse(articlesResponse.data);
       
               const mediaIds = articlesResponse.data
@@ -39,7 +38,6 @@ export default function ResponseProvider({children}){
       
           fetchArticlesAndMedia();
     },[])
-
 return <ResponseContext.Provider value={response}>
     <MediaContext.Provider value={{media, loading}}>
     {children}

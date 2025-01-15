@@ -26,7 +26,6 @@ export default function Footer(){
                         </a>
                         <a href="">
                         <img src={tweet} alt="" className="w-5"/>
-
                         </a>
                     </section>
                 </div>
