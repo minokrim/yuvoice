@@ -17,7 +17,8 @@ export default function Stories(){
     const [selectedCategory, setSelectedCategory] = useState("");
     const articlesPerPage = 12
     const [searchTerm, setSearchTerm] = useState("");
-        
+    const [selectedId, setSelectedId] = useState("");
+
         const filteredArticles = post.filter((article) => {
           const matchesCategory = selectedCategory
             ? article.acf.category.includes(selectedCategory)
@@ -57,6 +58,7 @@ export default function Stories(){
             setCurrentPage(1);
         };
 
+
     
     return <main className="stories_holder">
         
@@ -79,11 +81,11 @@ export default function Stories(){
               title={loading?"LOADING":article.title.rendered}
               meta={loading?"LOADING":article.acf.meta_description}
               writer={loading?"LOADING":article.acf.writers_name}
+              storyId={article.id}
             />
                 </div>
             ))}
         </section>
-
         <section className="pagination_controls">
         <button onClick={handlePrevious} disabled={currentPage === 1}>
           <img src={larrow} alt="" className="arrow"/>
