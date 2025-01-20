@@ -1,5 +1,4 @@
 import './App.css';
-import Body from './body/body.jsx';
 import ResponseProvider from './context/responseContext.jsx';
 import { HashRouter,Routes,Route} from 'react-router-dom';
 import EditorialBody from './editorial/editorialbody.jsx';
