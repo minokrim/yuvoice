@@ -1,7 +1,7 @@
 import React from "react";
 import l1 from "../assets/l7.jpg"
 export default function LandingPage1(){
-    return <main className="h-[100vh] w-full bg-cover bg-center bg-no-repeat flex flex-col" style={{ backgroundImage: `url(${l1})` }}>
+    return <main className="h-[100vh] w-full bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center md:items-start" style={{ backgroundImage: `url(${l1})` }}>
         <div className="mt-28 py-0 pl-5 w-[90%] md:w-[60%] lg:w-[30%] z-50 relative text-left md:pl-32 lg:py-10 lg:mt-40 justify-self-start">
         <section>
             <h3 className="sm:text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-b from-purple-800 to-blue-800">Our Vision</h3>
