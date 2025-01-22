@@ -73,7 +73,7 @@ export default function Nav(){
 
         {mobileNav && (
         <section className="mobileNavOptions" id="mobileNav" onClick={handleClick}>
-            <Link to="/">Home</Link>
+            <Link to="/" className="text-black no-underline">Home</Link>
           <div
             className="nav-option"
             onClick={(e) => {
