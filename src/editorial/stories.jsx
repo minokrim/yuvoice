@@ -17,7 +17,6 @@ export default function Stories(){
     const [selectedCategory, setSelectedCategory] = useState("");
     const articlesPerPage = 12
     const [searchTerm, setSearchTerm] = useState("");
-    const [selectedId, setSelectedId] = useState("");
 
         const filteredArticles = post.filter((article) => {
           const matchesCategory = selectedCategory

@@ -24,10 +24,10 @@ export default function Card({category,image,title,meta,writer,storyId}){
                 <p className="writer overflow-hidden h-6">{writer}</p>
                 </section>
                 <section className="read-more">
-                <p onClick={handleClick} className="cursor-pointer">Read more</p>
-                    {/* <Link to={`/story/${storyId}`}>
+                {/* <p onClick={handleClick} className="cursor-pointer">Read more</p> */}
+                    <Link to={`/story/${storyId}`}>
                     <p onClick={handleClick} className="cursor-pointer">Read more</p>
-                    </Link> */}
+                    </Link>
                     <img src={readmore} alt="button to read more" />
                 </section>
             </div>
