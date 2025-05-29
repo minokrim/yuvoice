@@ -5,14 +5,17 @@ import EditorialBody from './editorial/editorialbody.jsx';
 import SubmitStoryBody from './editorial/submitstory/submitstorybody.jsx';
 import LandingBody from './landingpage/landingBody.jsx';
 import StoryBody from "../src/editorial/story/storybody.jsx"
+import GetInTouch from './getInvolved/getintouch.jsx';
+import VolunteerBody from './volunteer/volunteerBody.jsx';
 function App() {
   return (
     <div className="App">
       <HashRouter>
       <ResponseProvider>
       <Routes>
-        {/* <Route path='/' element={<Body/>}/> */}
+        <Route path='/' element={<VolunteerBody/>}/>
         <Route path='/' element={<LandingBody/>}/>
+        <Route path='/getintouch' element={<GetInTouch/>}/>
         <Route path='/globalstories' element={<EditorialBody/>}/>
         <Route path='/submitstory' element={<SubmitStoryBody/>}/>
         <Route path='/story/:storyId' element={<StoryBody/>}/>

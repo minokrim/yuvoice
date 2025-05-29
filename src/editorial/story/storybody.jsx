@@ -28,8 +28,8 @@ export default function StoryBody(){
     }
     console.log(currentStory);
 
-    return <main className="flex flex-col items-center justify-center">
-        <section className="flex flex-col bg-gradient-to-b pb-10 from-purple-600/20 to-white justify-center items-center">
+    return <main className="flex flex-col items-center">
+        <section className=" flex flex-col bg-gradient-to-b pb-10 from-purple-600/20 to-white justify-center items-center w-full">
         <Nav/>
         <StoryHeader currentStory={currentStory} currentMedia={currentMedia}/>
         </section>
