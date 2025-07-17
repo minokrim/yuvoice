@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import "./nav.css"
 import dropdown from "../assets/dropdown.png";
-import logo from "../assets/logo2.png";
+import logo from "../assets/newLogo.png";
 import { Link } from "react-router-dom";
 import hamburger from "../assets/hamburger.png"
 import EditorialDropDown from "../component/editorialDropdown";
@@ -33,7 +33,7 @@ export default function Nav(){
 
 
 
-    return <main className="nav-Body">
+    return <main className="nav-Body z-20 relative">
 
         <section className="nav-left">
           <Link to="/">
@@ -55,19 +55,15 @@ export default function Nav(){
             </div>
             
             <div className="nav-option" onMouseEnter={getInvolvedDropdown.handleMouseEnter} onMouseLeave={getInvolvedDropdown.handleMouseLeave}>
-            <Link to="/" className="text-black no-underline">Get Involved</Link>
+            <Link to="/volunteer" className="text-black no-underline">Get Involved</Link>
             <img src={dropdown} alt="dropDown"/>
-            <section className="dropdown dropdown2">
+            <section className="dropdown">
             {getInvolvedDropdown.isVisible && <GetinvolvedDropDown/>}
             </section>
             </div>
 
             <div className="nav-option" onMouseEnter={aboutDropdown.handleMouseEnter} onMouseLeave={aboutDropdown.handleMouseLeave}>
-            <Link to="/" className="text-black no-underline">About</Link>
-            <img src={dropdown} alt="dropDown"/>
-            <section className="dropdown dropdown2">
-            {aboutDropdown.isVisible && <AboutDropDown/>}
-            </section>
+            <Link to="/about" className="text-black no-underline">About</Link>
             </div>
         </section>
 
@@ -113,7 +109,6 @@ export default function Nav(){
             <p>About</p>
             <img src={dropdown} alt="dropDown"/>
             <section className="dropdown dropdown2">
-            {dropdownState.about && <AboutDropDown />}
             </section>
           </div>
         </section>

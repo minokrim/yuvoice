@@ -10,7 +10,7 @@ export default function WhyVolunteer(){
         <section className="w-[90%] lg:w-[70%] flex flex-col text-left items-center justify-center">
             <h2 className="self-start text-lg md:text-2xl">Why Volunteer with Us?</h2>
             <section className="w-full md:w-[90%]">
-                <VolunteerComponent img={img1} title={"Global Impact:"} description={"Yuvoice is a global, remote-first organisation, which means no matter where you are, you can be part of this incredible journey."}/>
+                <VolunteerComponent img={img1} title={"Global Impact:"} description={"TurtleZence is a global, remote-first organisation, which means no matter where you are, you can be part of this incredible journey."}/>
                 <VolunteerComponent img={img2} title={"Future of Democracy:"} description={"We're building a platform that connects millions to the causes that matter, rewarding real-world impact with online recognition."} />
                 <VolunteerComponent img={img3} title={"Flexible & Fun:"} description={"Whether you’ve got a few hours a week or more time to give, there’s a role for you! We're all about making volunteering fit your schedule, not the other way around."}/>
                 <VolunteerComponent img={img4} title={"Learn, Grow & Connect:"} description={"Gain real-world skills, expand your network, and collaborate with passionate people from every corner of the globe."}/>

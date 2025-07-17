@@ -9,7 +9,7 @@ export default function RoleCard({title,description,type,hours}){
                 <p className="flex border-solid border-0.1 border-gray-300 text-gray-300 font-light text-sm rounded-full px-2 w-[4em] items-center justify-center">{type}</p>
                 <p className="flex border-solid border-0.1 border-gray-300 text-gray-300 font-light text-sm rounded-full px-2 w-[4em] items-center justify-center">{hours} hours</p>
             </div>
-            <button className="text-white text-lg bg-purple-900 px-4 md:px-8 h-max rounded-lg flex justify-between ">Apply<TfiArrowTopRight value={{IoColorFill}} className="flex justify-self-end"/></button>
+            <button className="text-white text-lg bg-purple-900 px-4 md:px-8 h-max rounded-lg flex justify-between">Apply<TfiArrowTopRight value={{IoColorFill}} className="flex justify-self-end text-2xl font-extrabold"/></button>
         </section> 
     </main>
 }

@@ -45,7 +45,7 @@ export default function Editorial(){
 
     return <main className="flex flex-col text-left items-center py-10">
         <div className="w-[90%]">
-        <h2 className="text-3xl font-medium">Yuvoice <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#662D91] via-[#E87528] to-[#D30FD3]">Editorial</span></h2>
+        <h2 className="text-3xl font-medium">TurtleZence <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#662D91] via-[#E87528] to-[#D30FD3]">Editorial</span></h2>
         <section className="flex flex-col md:flex-row justify-between items-center">
             <p className="font-normal">Bringing <b>stories</b> from around <b>the world.</b></p>
             <button className="h-[20%] bg-orange-600 bg-opacity-50 text-white border-none px-7 py-3 rounded-xl font-semibold">Read More</button>
@@ -56,7 +56,7 @@ export default function Editorial(){
             <Carousel className="pl-7" responsive={responsive} slidesToSlide={1} arrows={false} infinite={true} autoPlay={true} autoPlaySpeed={3000} customTransition="transform 300ms ease-in-out" beforeChange={handleBeforeChange}>
               {topArticles.map((article,index)=>(
               <div key={index}>
-              <CarouselCard image={associatedMedia[index] && associatedMedia[index].source_url} title={article.title.rendered} category={article.acf.category[0]}/>
+              <CarouselCard image={article.social_image} title={article.title} category={article.type_of}/>
               </div>
               ))}
             </Carousel>

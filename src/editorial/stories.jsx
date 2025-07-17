@@ -19,13 +19,9 @@ export default function Stories(){
     const [searchTerm, setSearchTerm] = useState("");
 
         const filteredArticles = post.filter((article) => {
-          const matchesCategory = selectedCategory
-            ? article.acf.category.includes(selectedCategory)
-            : true;
-          const matchesSearch =
-            article.title.rendered.toLowerCase().includes(searchTerm.toLowerCase()) || article.acf.writers_name.toLowerCase().includes(searchTerm.toLowerCase()) ;
+          const matchesSearch =article.title.toLowerCase().includes(searchTerm.toLowerCase()) || article.user.name.toLowerCase().includes(searchTerm.toLowerCase()) ;
       
-          return matchesCategory && matchesSearch;
+          return matchesSearch;
         });
 
         const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
@@ -33,9 +29,7 @@ export default function Stories(){
         const endIndex = currentPage * articlesPerPage;
       
         const currentArticles = filteredArticles.slice(startIndex, endIndex);
-        const currentMedia = currentArticles.map((article) =>
-            media.find((mediaItem) => mediaItem.id === article.featured_media)
-          );
+
         const handlePrevious = () => {
             if (currentPage > 1) {
               setCurrentPage((prev) => prev - 1);
@@ -75,11 +69,11 @@ export default function Stories(){
             {currentArticles.map((article,index)=>(
                 <div key={article.id} className="stories_card">
             <Card
-              category={loading?"LOADING":article.acf.category[0]}
-              image={loading?spinner:currentMedia[index]?.source_url}
-              title={loading?"LOADING":article.title.rendered}
-              meta={loading?"LOADING":article.acf.meta_description}
-              writer={loading?"LOADING":article.acf.writers_name}
+              category={article.tag_list[0]}
+              image={article.social_image}
+              title={article.title}
+              meta={article.description}
+              writer={article.user.name}
               storyId={article.id}
             />
                 </div>

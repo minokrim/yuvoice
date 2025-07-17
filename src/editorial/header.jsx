@@ -7,17 +7,10 @@ import fallback from "../assets/ldsvg3.png"
 
 export default function Header() {
   const post = useContext(ResponseContext);
-  const { media, loading } = useContext(MediaContext);
 
   const selectedCategory = "Humanity";
 
-  const filteredPosts = post
-    .filter((article) => article.acf.category.includes(selectedCategory))
-    .slice(0, 3);
-
-  const filteredMedia = media.filter((item) =>
-    filteredPosts.some((postItem) => postItem.featured_media === item.id)
-  );
+  const filteredPosts = post.slice(0, 3);
 
   return (
     <main className="header-body">
@@ -30,21 +23,21 @@ export default function Header() {
           {<div className="section-containers">
               <section className="section-a">
                 <div className="section-a-left">
-                  {filteredMedia.length > 0 && (
-                    <img src={loading?spinner:filteredMedia[0].source_url} alt=""   onError={(e) => e.target.src = {fallback}} 
+                  {filteredPosts.length > 0 && (
+                    <img src={filteredPosts[0].cover_image} alt=""   onError={(e) => e.target.src = {fallback}} 
 />
                   )}
                   {filteredPosts.length > 0 && (
                     <div className="sec-a-details">
                       <div className="sec-a-detail1">
-                        <h2>{loading?"LOADING":filteredPosts[0].title.rendered}</h2>
+                        <h2>{filteredPosts[0].title}</h2>
                         <figure>
                           <img src={person} alt="user icon"   onError={(e) => e.target.src = {fallback}}/>
-                          <p>{loading?"LOADING":filteredPosts[0].acf.writers_name}</p>
+                          <p>{filteredPosts[0].user.name}</p>
                         </figure>
                       </div>
                       <p className="sec-a-meta">
-                        {loading?"LOADING":filteredPosts[0].acf.meta_description}
+                        {filteredPosts[0].description}
                       </p>
                     </div>
                   )}
@@ -53,9 +46,9 @@ export default function Header() {
 
               <section className="section-b">
                 <div className="section-b-media">
-                  {filteredMedia.slice(1).map((item, index) => (
+                  {filteredPosts.slice(1).map((item, index) => (
                     <div key={item.id} className="section-b-media-holder">
-                      <img src={loading?spinner:item.source_url} alt=""   onError={(e) => e.target.src = {fallback}}/>
+                      <img src={item.cover_image} alt=""   onError={(e) => e.target.src = {fallback}}/>
                     </div>
                   ))}
                 </div>
@@ -63,11 +56,11 @@ export default function Header() {
                 <div className="section-b-details">
                   {filteredPosts.slice(1).map((postItem) => (
                     <div key={postItem.id} className="section-b-details-holder">
-                      <h2>{loading?"LOADING":postItem.title.rendered}</h2>
-                      <p>{loading?"LOADING":postItem.acf.meta_description}</p>
+                      <h2>{postItem.title}</h2>
+                      <p>{postItem.description}</p>
                       <figure>
                         <img src={person} alt="user icon"   onError={(e) => e.target.src = {fallback}}/>
-                        <p>{loading?"LOADING":postItem.acf.writers_name}</p>
+                        <p>{postItem.user.name}</p>
                       </figure>
                     </div>
                   ))}

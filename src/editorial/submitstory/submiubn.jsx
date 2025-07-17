@@ -7,7 +7,7 @@ export default function SubmitUbn(){
         <div className="flex flex-col justify-center items-center">
         <section className="flex flex-col w-[80%] justify-center">
             <h2 className="text-2xl text-left font-bold">UBN (Unbreak the News)</h2>
-            <p className="w-[100%] text-left font-semibold">At Yuvoice, we’re rethinking the way stories are told—centered on humanity, truth, and compassion. Mainstream news often feels negative and impersonal, but we’re flipping the script to focus on the people behind the events.</p>
+            <p className="w-[100%] text-left font-semibold">At TurtleZence, we’re rethinking the way stories are told—centered on humanity, truth, and compassion. Mainstream news often feels negative and impersonal, but we’re flipping the script to focus on the people behind the events.</p>
         </section>
 
         <section className="flex flex-col w-[80%] justify-center h-full gap-10 mt-10 md:flex-row md:gap-20 md:items-center">

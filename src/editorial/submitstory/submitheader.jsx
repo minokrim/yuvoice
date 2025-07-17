@@ -13,7 +13,7 @@ export default function SubmitHeader(){
         <div className="flex flex-col w-[85%] rounded-xl shadow-2xl p-5 px-10 bg-white">
             <section className="flex flex-col items-left text-left">
                 <h1 className="text-2xl font-semibold md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-purple-600 to-blue-600">Submit your story</h1>
-                <p className="text-lg mt-2 md:text-2xl font-normal text-left items-center md:mt-0">Yuvoice believes in the power of personal, authentic stories. </p>
+                <p className="text-lg mt-2 md:text-2xl font-normal text-left items-center md:mt-0">TurtleZence believes in the power of personal, authentic stories. </p>
             </section>
             
             <section className="flex flex-col md:flex-col lg:flex-row items-center justify-between">

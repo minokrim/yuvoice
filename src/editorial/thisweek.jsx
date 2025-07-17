@@ -32,7 +32,7 @@ export default function Thisweek(){
             const associatedMedia = media.find((medias) => medias.id === posts.featured_media);
             return(
                 <div key={posts.id} className="tw-content">
-                    <Card category={loading?"LOADING":posts.acf.category[0]} image={loading?spinner:associatedMedia && associatedMedia.source_url} title={loading?"LOADING":posts.title.rendered} meta={loading?"LOADING":posts.acf.meta_description} writer={loading?"LOADING":posts.acf.writers_name}/>
+                    <Card category={loading?"LOADING":posts.category[0]} image={posts.cover_image} title={posts.title} meta={posts.description} writer={posts.user.name}/>
                 </div>
             )
             })}

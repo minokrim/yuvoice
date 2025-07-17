@@ -179,7 +179,7 @@ export default function Form(){
                 <h2 className="font-semibold text-gray-600 text-2xl text-center md:text-left">By submitting, I agree to have my piece edited, and to the terms and conditions of the website and the Contributor Agreement.</h2>
                 <div className="flex mt-5 gap-3">
                 <input type="checkbox" name="agreement" id="agreement" checked={formData.agreement} onChange={(e) => {setFormData((prevData) => ({...prevData,agreement: e.target.checked,}));}}/> 
-                <p className="font-medium text-gray-600 text-lg text-left">I have read the Yuvoice Contributor Agreement.</p>
+                <p className="font-medium text-gray-600 text-lg text-left">I have read the TurtleZence Contributor Agreement.</p>
                 </div>
             </section>
 

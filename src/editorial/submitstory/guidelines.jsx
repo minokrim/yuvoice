@@ -19,7 +19,7 @@ export default function Guidelines(){
                     <li>Ensure you have the intellectual property rights 
                     to the piece you are submitting.</li>
                     <li>
-                    By submitting your piece, you are giving Yuvoice the right to publish it. We ask for exclusive written and audio content rights for a year and non-exclusive publication rights after that. For illustrations, you keep all rights, and we only need the non-exclusive right to publish.
+                    By submitting your piece, you are giving TurtleZence the right to publish it. We ask for exclusive written and audio content rights for a year and non-exclusive publication rights after that. For illustrations, you keep all rights, and we only need the non-exclusive right to publish.
                     </li>
                     <li>
                     By submitting your piece, you agree that we can publish the edited version of the piece. If you disapprove of any edits, please let us know, as we can take down or archive the piece or that portion of it from the website.

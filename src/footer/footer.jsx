@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/newLogo.png";
 import ig from "../assets/ig.png";
 import fb from "../assets/fb.png";
 import tweet from "../assets/tweet.png";

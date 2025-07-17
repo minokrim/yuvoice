@@ -1,9 +1,9 @@
 import React, { useState,useContext } from "react";
 import "./LandingPage.css";
-import background1 from "../assets/bg1.jpg";
+import background1 from "../assets/bg3.jpg";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
-import background2 from "../assets/bg2.jpg";
+import background2 from "../assets/bg4.jpg";
 import Nav from "../nav/nav.jsx";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -156,7 +156,7 @@ const responsive = {
         <div className="editorial-content w-[100%] flex justify-center items-center">
           <div className="editorial-text px-10 w-[90%]">
             <h2 className="flex font-medium justify-start border-2">
-              Yuvoice <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#662D91] via-[#E87528] to-[#D30FD3]">Editorial</span>
+              TurtleZence <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#662D91] via-[#E87528] to-[#D30FD3]">Editorial</span>
             </h2>
             <section className="flex justify-between border-2 gap-20">
             <p>Bringing you stories around the world</p>
@@ -184,8 +184,8 @@ const responsive = {
       </section>
       <section className="platform flex ">
         <div className="bg-gradient-to-r from-purple-600/20 via-orange-600/20 to-pink-600/20 w-1/2 rounded-ee-[5em] p-5 pr-40 text-left">
-        <h2>Yuvoice <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#662D91] via-[#E87528] to-[#D30FD3]">Platform</span></h2>
-        <p className="w-[60%] text-sm">Yuvoice is creating an AI-Backed platform that will disrupt the modern internet.</p>
+        <h2>TurtleZence <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#662D91] via-[#E87528] to-[#D30FD3]">Platform</span></h2>
+        <p className="w-[60%] text-sm">TurtleZence is creating an AI-Backed platform that will disrupt the modern internet.</p>
 
 
             <h3 className="font-bold text-xl">We are actually <span className="highlight-social text-transparent bg-clip-text  bg-gradient-to-r from-[#662D91] via-[#E87528] to-[#23C6D8]">"social"</span></h3>
@@ -220,7 +220,7 @@ const responsive = {
     
 
       <section className="subscribe mt-20 bg-gradient-to-r from-[#E87528] to-[#662D91] flex items-center justify-center">
-        <h2>Yuvoice Platform: Social Media for Social Good – Coming Soon in 2025</h2>
+        <h2>TurtleZence Platform: Social Media for Social Good – Coming Soon in 2025</h2>
       </section>
 
       <form className="mt-10">

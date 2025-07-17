@@ -28,10 +28,10 @@ export default function Ubn(){
             {topArticles.map((article,index)=>(
                 <div key={article.id} className="ubn-card">
                     <UbnCard 
-                    image={loading?spinner:associatedMedia[index] && associatedMedia[index].source_url}
-                    title={loading?"LOADING":article.title.rendered}
-                    meta={loading?"LOADING":article.acf.meta_description}
-                    writer={loading?"LOADING":article.acf.writers_name}
+                    image={article.social_image}
+                    title={article.title}
+                    meta={article.description}
+                    writer={article.user.name}
                     />
                 </div>
             ))}

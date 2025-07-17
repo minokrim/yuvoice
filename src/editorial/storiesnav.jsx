@@ -18,14 +18,14 @@ export default function NavStories({onCategorySelect}){
         };
         
     return <main className="storyNav-body">
-        <section className="storyNav-container">
+        {/* <section className="storyNav-container">
             <h5 className={`cat ${selectedCategory === "" ? "active" : ""}`}onClick={() => handleCategoryClick("")}>All Stories</h5>
             {cat.map((category,index)=>(
                 <div key={index} className="storyNav-render">
-                    <h5 className={`cat ${selectedCategory === category ? "active" : ""}`}onClick={() => handleCategoryClick(category)}>{category||"LOADING"}</h5>
+                    <h5 className={`cat ${selectedCategory === category ? "active" : ""}`}onClick={() => handleCategoryClick(category)}>{category.tag_list[1]||"LOADING"}</h5>
                 </div>
             ))}
-        </section>
+        </section> */}
         <div className="hr"></div>
 
     </main>

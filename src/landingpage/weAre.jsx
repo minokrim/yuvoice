@@ -9,8 +9,8 @@ export default function WeAre(){
         <section className="sm:flex flex-col items-center md:flex-row md:text-left">
             <div className="sm:w-[100%] rounded-0 flex lg:w-[60%] pt-5 items-center bg-gradient-to-b from-purple-600/20 to-orange-600/20 md:rounded-ee-[5em] pb-5">
             <div className="sm:w-[80%] ml-2 flex flex-col md:ml-10 lg:ml-28">
-                <h3 className="sm:text-xl md:text-3xl font-bold">Yuvoice <span className="text-transparent bg-clip-text  bg-gradient-to-b from-[#662D91] via-[#E87528] to-[#D30FD3]">Platform</span></h3>
-                <p className="sm:w-[100%] text-left md:w-[70%] lg:w-[38%]">Yuvoice is creating an AI-Backed that will disrupt the modern internet.</p>
+                <h3 className="sm:text-xl md:text-3xl font-bold">TurtleZence <span className="text-transparent bg-clip-text  bg-gradient-to-b from-[#662D91] via-[#E87528] to-[#D30FD3]">Platform</span></h3>
+                <p className="sm:w-[100%] text-left md:w-[70%] lg:w-[38%]">TurtleZence is creating an AI-Backed that will disrupt the modern internet.</p>
 
                 <section className="p-5 md:p-0">
                     <h4 className="sm:text-base md:text-xl font-semibold">We are actually <span className="text-transparent bg-clip-text  bg-gradient-to-b from-[#662D91] via-[#E87528] to-[#23C6D8]">"Social"</span></h4>
