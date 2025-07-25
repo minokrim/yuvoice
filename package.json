@@ -1,6 +1,6 @@
 {
   "name": "yuvoice",
-  "homepage": "/wp-content/reactpress/apps/yuvoice/build",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
