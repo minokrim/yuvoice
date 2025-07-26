@@ -106,8 +106,7 @@ export default function Nav(){
               handleDropdownClick("about");
             }}
           >
-            <p>About</p>
-            <img src={dropdown} alt="dropDown"/>
+            <Link to="/about" className="text-black no-underline">About</Link>
             <section className="dropdown dropdown2">
             </section>
           </div>

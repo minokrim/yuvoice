@@ -5,7 +5,7 @@ import w3 from "../assets/img3.png"
 import w4 from "../assets/img4.png"
 
 export default function WeAre(){
-    return <main className="flex flex-col gap-10 pb-20 md:pb-0">
+    return <main className="flex flex-col gap-10 pb-20 md:pb-0 pt-40" >
         <section className="sm:flex flex-col items-center md:flex-row md:text-left">
             <div className="sm:w-[100%] rounded-0 flex lg:w-[60%] pt-5 items-center bg-gradient-to-b from-purple-600/20 to-orange-600/20 md:rounded-ee-[5em] pb-5">
             <div className="sm:w-[80%] ml-2 flex flex-col md:ml-10 lg:ml-28">
